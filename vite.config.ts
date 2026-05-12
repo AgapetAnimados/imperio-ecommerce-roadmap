@@ -12,7 +12,7 @@ export default defineConfig({
   preview: {
     port,
     host: '0.0.0.0',
-    allowedHosts: 'all',
+    allowedHosts: true,
   },
   plugins: [react()],
   resolve: {
