@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imperio Ecommerce - Tu Ruta de Éxito</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2031917040550632');
+  fbq('track', 'PageView');
+  </script>
+  <!-- End Meta Pixel Code -->
+  <style>
+    :root {
+      --bg-color: #0f1115;
+      --accent-color: #c5a059;
+      --accent-glow: rgba(197, 160, 89, 0.4);
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-color);
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    #root {
+      background-color: var(--bg-color);
+      min-height: 100vh;
+    }
+
+    ::-webkit-scrollbar { height: 10px; width: 10px; }
+    ::-webkit-scrollbar-track { background: rgba(0,0,0,0.2); border-radius: 100px; margin: 0 10vw; }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(135deg, #f3e0b5 0%, var(--accent-color) 50%, #8e6d31 100%);
+      border-radius: 100px;
+      border: 2px solid var(--bg-color);
+      box-shadow: 0 0 15px var(--accent-glow);
+    }
+    ::-webkit-scrollbar-thumb:hover { background: #f3e0b5; }
+
+    @keyframes dash {
+      to { stroke-dashoffset: -40; }
+    }
+    .road-line {
+      stroke-dasharray: 20, 20;
+      animation: dash 3s linear infinite;
+    }
+    .horizontal-scroll-mask {
+      mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+    @keyframes scroll-hint {
+      0%, 100% { transform: translateX(0); opacity: 0.5; }
+      50% { transform: translateX(10px); opacity: 1; }
+    }
+    .scroll-hint-arrow { animation: scroll-hint 2s ease-in-out infinite; }
+
+    .gold-glow { box-shadow: 0 0 30px var(--accent-glow); }
+    .text-gold-gradient {
+      background: linear-gradient(135deg, #f3e0b5 0%, #c5a059 50%, #8e6d31 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    @keyframes animate-in-fade { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes animate-in-slide-bottom { from { transform: translateY(16px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    @keyframes animate-in-slide-top { from { transform: translateY(-16px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    .animate-in { animation-fill-mode: both; }
+    .fade-in { animation-name: animate-in-fade; }
+    .slide-in-from-bottom-4 { animation-name: animate-in-slide-bottom; }
+    .slide-in-from-top-4 { animation-name: animate-in-slide-top; }
+    .duration-500 { animation-duration: 500ms; }
+    .duration-700 { animation-duration: 700ms; }
+    .duration-1000 { animation-duration: 1000ms; }
+    .delay-200 { animation-delay: 200ms; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
